@@ -23,5 +23,6 @@ public class PecaModelo {
 	public void setModelo(Modelo modelo) {
 		this.modelo = modelo;
 	}
+	 
 	
 }
