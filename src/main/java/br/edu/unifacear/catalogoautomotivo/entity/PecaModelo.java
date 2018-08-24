@@ -4,7 +4,7 @@ public class PecaModelo {
 	private Long id;
 	private Peca peca;
 	private Modelo modelo;
-	
+	  
 	public Long getId() {
 		return id;
 	}
@@ -24,5 +24,6 @@ public class PecaModelo {
 		this.modelo = modelo;
 	}
 	 
+	  
 	
 }
