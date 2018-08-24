@@ -2,39 +2,15 @@ package br.edu.unifacear.catalogoautomotivo.entity;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
 public class Peca {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
-	@Column(length=50, nullable = false)
 	private String codigoPeca;
-	
-	@Column(length=100, nullable = false)
 	private String nome;
-
-	@Column(precision = 7, scale = 2, nullable = false)
 	private double preco;
-	
-	@Column(length = 200, nullable = false)
 	private String descricao;
-	
-	@Column(length = 100, nullable = false)
 	private String foto;
-	
-	@Column(nullable = false)
 	private Short quantidadeEstoque;
-	
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "peca", cascade = CascadeType.ALL, targetEntity = PecaModelo.class)
 	private List<PecaModelo>listaPecaModelo;
 	
 	public Long getId() {

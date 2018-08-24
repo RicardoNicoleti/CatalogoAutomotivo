@@ -14,7 +14,7 @@ public class GenericDAO<Entidade> {
 		private Class<Entidade> classe;
 
 		@SuppressWarnings("unchecked")
-		public GenericDAO() { 
+		public GenericDAO() {
 			this.classe = (Class<Entidade>) ((ParameterizedType) getClass().getGenericSuperclass())
 					.getActualTypeArguments()[0];
 		}
