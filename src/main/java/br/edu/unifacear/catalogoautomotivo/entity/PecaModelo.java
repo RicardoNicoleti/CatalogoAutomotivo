@@ -32,6 +32,7 @@ public class PecaModelo {
 	public void setPeca(Peca peca) {
 		this.peca = peca;
 	}
+	
 	public Modelo getModelo() {
 		return modelo;
 	}
