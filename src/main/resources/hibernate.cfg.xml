@@ -26,7 +26,7 @@
 		<!-- Desabilita a cache -->
 		<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
 
-		<!-- Exibe os comandos SQL -->
+		<!-- Exibe os comandos SQL --> 
 		<property name="show_sql">true</property>
 		
 		<!-- Cria as tabelas -->
