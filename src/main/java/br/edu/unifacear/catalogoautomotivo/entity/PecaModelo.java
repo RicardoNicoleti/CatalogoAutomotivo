@@ -25,7 +25,7 @@ public class PecaModelo {
 	@ManyToOne
 	@JoinColumn(nullable = false)
 	private Modelo modelo;
-	
+	  
 	public Long getId() {
 		return id;
 	}
@@ -38,11 +38,14 @@ public class PecaModelo {
 	public void setPeca(Peca peca) {
 		this.peca = peca;
 	}
+	
 	public Modelo getModelo() {
 		return modelo;
 	}
 	public void setModelo(Modelo modelo) {
 		this.modelo = modelo;
 	}
+	 
+	  
 	
 }
