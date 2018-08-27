@@ -29,7 +29,7 @@
 		<!-- Exibe os comandos SQL --> 
 		<property name="show_sql">true</property>
 		
-		<!-- Cria as tabelas -->
+		<!-- Cria as tabelas --> 
 		<property name="hbm2ddl.auto">create</property>
 		
 		<!-- Mapeamento das entidades -->
