@@ -26,7 +26,6 @@ public class GenericDAO<Entidade> {
 			try {
 
 				transacao = sessao.beginTransaction();
-				System.out.println(entidade);
 				sessao.save(entidade);
 				transacao.commit();
 

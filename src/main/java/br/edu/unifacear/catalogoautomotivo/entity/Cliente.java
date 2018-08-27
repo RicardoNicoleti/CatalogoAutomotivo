@@ -1,6 +1,6 @@
 package br.edu.unifacear.catalogoautomotivo.entity;
 
-public class Cliente {
+public class Cliente extends Pessoa{
 	private Long id;
 	private TipoCliente cliente;
 	private Pessoa pessoa;

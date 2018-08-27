@@ -7,7 +7,7 @@
 <hibernate-configuration>
 
     <session-factory>
-
+		
        <!-- Configurações da conexão -->
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost:3306/catalogoAutomotivo?useSSL=true</property>
@@ -28,12 +28,20 @@
 
 		<!-- Exibe os comandos SQL -->
 		<property name="show_sql">true</property>
-
+		
 		<!-- Cria as tabelas -->
 		<property name="hbm2ddl.auto">create</property>
 		
 		<!-- Mapeamento das entidades -->
-		<mapping class="br.edu.unifacear.catalogoautomotivo.Pessoa" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Peca" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.PecaModelo" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Linha" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Modelo" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.ModeloAplicacao" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Montadora" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Aplicacao" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Avaliacao" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Funcao" />
 		
 	
     </session-factory>

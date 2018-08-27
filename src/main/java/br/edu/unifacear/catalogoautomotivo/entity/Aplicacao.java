@@ -1,7 +1,21 @@
 package br.edu.unifacear.catalogoautomotivo.entity;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+@Access(AccessType.FIELD)
 public class Aplicacao {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
+	@Column(length = 200, nullable = false)
 	private String descricao;
 	
 	public Long getId() {
@@ -16,6 +30,5 @@ public class Aplicacao {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
 	
 }

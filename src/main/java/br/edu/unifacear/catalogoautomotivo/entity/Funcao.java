@@ -1,9 +1,18 @@
 package br.edu.unifacear.catalogoautomotivo.entity;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Funcao {
-	private Long id;
-	private String descricao;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	
+	@Column(length = 200)
+	private String descricao;
 	
 	public Long getId() {
 		return id;
@@ -17,6 +26,5 @@ public class Funcao {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
 	
 }

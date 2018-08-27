@@ -1,10 +1,28 @@
 package br.edu.unifacear.catalogoautomotivo.entity;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 public class Avaliacao {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
+	@ManyToOne
+	@JoinColumn(nullable = false)
 	private Peca peca;
+	
+	@Column(length = 200, nullable = false)
 	private String descricao;
+	
+	@Column(nullable = true)
 	private Short like;
+	
+	@Column(nullable = true)
 	private Short deslike;
 	
 	public Long getId() {
