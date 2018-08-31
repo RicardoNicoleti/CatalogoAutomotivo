@@ -1,10 +1,34 @@
 package br.edu.unifacear.catalogoautomotivo.entity;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+
+@Entity
+@Access(AccessType.FIELD)
 public class Funcionario {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
+	@ManyToOne
+	@JoinColumn(nullable = false)
 	private Funcao funcao;
+	
+	@Column(length = 30, nullable = false)
 	private String carteiraTrabalho;
+	
+	@OneToOne
+	@JoinColumn(nullable = false)
 	private Pessoa pessoa;
+	
 	public Long getId() {
 		return id;
 	}

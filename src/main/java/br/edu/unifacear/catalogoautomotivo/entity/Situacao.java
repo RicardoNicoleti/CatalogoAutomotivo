@@ -1,5 +1,11 @@
 package br.edu.unifacear.catalogoautomotivo.entity;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Entity;
+
+@Entity
+@Access(AccessType.FIELD)
 public class Situacao {
 	private Long id;
 	private String descricao;

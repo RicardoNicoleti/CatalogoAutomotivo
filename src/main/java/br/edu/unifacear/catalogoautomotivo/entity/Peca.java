@@ -13,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.swing.text.StyledEditorKit.ForegroundAction;
 
 @Entity
 @Access(AccessType.FIELD)
@@ -105,6 +106,13 @@ public class Peca {
 
 	public void setListaPecaModelo(List<PecaModelo> listaPecaModelo) {
 		this.listaPecaModelo = listaPecaModelo;
+	}
+
+	@Override
+	public String toString() {
+		return "Peca [id=" + id + ", codigoPeca=" + codigoPeca + ", nome=" + nome + ", preco=" + preco + ", descricao="
+				+ descricao + ", foto=" + foto + ", quantidadeEstoque=" + quantidadeEstoque + ", listaPecaModelo="
+				+ listaPecaModelo + "]";
 	}
 
 }

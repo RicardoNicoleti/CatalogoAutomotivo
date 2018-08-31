@@ -2,13 +2,39 @@ package br.edu.unifacear.catalogoautomotivo.entity;
 
 import java.util.Date;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Access(AccessType.FIELD)
 public class Pedido {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
+	@Temporal(TemporalType.DATE)
 	private Date dataVenda;
+	
+	@Column(precision = 7, scale = 2, nullable = false)
 	private double valorTotal;
+	
+	@Column(precision = 7, scale = 2, nullable = false)
 	private double valorDesconto;
+	
+	@Column(length = 50, nullable = false)
 	private String NF;
-	private Situacao situacao;
+	
+	@ManyToOne
+	@JoinColumn(nullable = false)
 	private Cliente cliente;
 	
 	public Long getId() {
@@ -37,15 +63,9 @@ public class Pedido {
 	}
 	public String getNF() {
 		return NF;
-	}
+	}	
 	public void setNF(String nF) {
 		NF = nF;
-	}
-	public Situacao getSituacao() {
-		return situacao;
-	}
-	public void setSituacao(Situacao situacao) {
-		this.situacao = situacao;
 	}
 	public Cliente getCliente() {
 		return cliente;

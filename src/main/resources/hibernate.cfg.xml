@@ -30,7 +30,7 @@
 		<property name="show_sql">true</property>
 		
 		<!-- Cria as tabelas --> 
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">update</property>
 		
 		<!-- Mapeamento das entidades -->
 		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Peca" />
@@ -41,8 +41,17 @@
 		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Montadora" />
 		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Aplicacao" />
 		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Avaliacao" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Pessoa" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Cidade" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Estado" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Cliente" />
 		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Funcao" />
-		
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Funcionario" />	
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.HistoricoPedido" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.ItemPedido" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Pedido" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.TipoCliente" />
+		<mapping class="br.edu.unifacear.catalogoautomotivo.entity.Funcao" />
 	
     </session-factory>
 

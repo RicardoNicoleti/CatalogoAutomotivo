@@ -1,12 +1,17 @@
 package br.edu.unifacear.catalogoautomotivo.entity;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+@Entity
+@Access(AccessType.FIELD)
 public class Avaliacao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

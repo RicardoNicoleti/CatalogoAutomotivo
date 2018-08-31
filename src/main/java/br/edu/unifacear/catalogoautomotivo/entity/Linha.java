@@ -30,6 +30,9 @@ public class Linha {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
+	@Override
+	public String toString() {
+		return "Linha [id=" + id + ", descricao=" + descricao + "]";
+	}
 	
 }

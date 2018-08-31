@@ -42,6 +42,9 @@ public class Montadora {
 	public void setLinha(Linha linha) {
 		this.linha = linha;
 	}
-	
-	
+	@Override
+	public String toString() {
+		return "Montadora [id=" + id + ", nome=" + nome + ", linha=" + linha + "]";
+	}
+
 }
